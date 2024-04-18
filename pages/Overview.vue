@@ -14,9 +14,12 @@
                         }}</b>, is a
                     country situated in <b>{{ countryDetails.subregion }}</b>. Its common name, <b>{{
                         countryDetails.name.common
-                    }}</b>,
-                    reflects its rich cultural and geographical heritage. Bordered by <b>{{ countryDetails.borders
                         }}</b>,
+                    reflects its rich cultural and geographical heritage. Bordered by <b>
+                        {{ countryDetails.borders ? countryDetails.borders.join(', ') : 'no countries because it is an'
+                            +
+                        ' island' }}
+                    </b>,
                     <b>{{ countryDetails.name.common }}</b> boasts a diverse landscape that spans across
                     <b>{{ countryDetails.region }}</b>.
                     <br>
@@ -30,7 +33,7 @@
                     country
                     is characterized by its captivating natural beauty, attracting visitors from around the globe.
                     Its
-                    capital city, <b>{{ countryDetails.capital }}</b>, serves as the political and economic hub,
+                    capital city, <b>{{ countryDetails.capital[0] }}</b>, serves as the political and economic hub,
                     situated at a
                     latitude and longitude of <b>{{ countryDetails.capitalInfo.latlng[0] }}</b> and
                     <b>{{ countryDetails.capitalInfo.latlng[1] }}</b>, respectively.
@@ -84,11 +87,11 @@
                     culture
                     through
                     various transportation networks.
-                    <br>
+                    <br><br>
                     International Recognition and Sports
                     <b>{{ countryDetails.name.common }}</b> participates in international events such as <b>{{
                         countryDetails.fifa
-                    }}</b>,
+                        }}</b>,
                     representing the nation's passion for sports and competition. Its rich sporting heritage
                     contributes
                     to its global recognition and fosters connections with other nations.
@@ -98,26 +101,28 @@
                     culture make
                     it a destination worth exploring. Whether trekking through its pristine <b>{{
                         countryDetails.region
-                    }}</b>
+                        }}</b>
                     or
                     immersing in its rich history, visitors to <b>{{ countryDetails.name.common }}</b> are sure to
                     be
                     captivated
                     by its charm and allure.
-                    <br>
+                    <br><br>
                     For more information on <b>{{ countryDetails.name.common }}</b>, including maps and historical
                     context,
                     please visit the following links:
                     <br>
                     <ul>
-                        <li>
-                            Google Maps: <a href="https://goo.gl/maps/DFsme2xEeugUAsCx5" target="_blank"> Explore
-                                {{ countryDetails.name.common }}</a>
+                        <li ref="googleMapsRef">
+                            Google Maps: <a :href="countryDetails.maps.googleMaps" target="_blank"> Explore {{
+                                countryDetails.name.common }}</a>
                         </li>
-                        <li>
-                            OpenStreetMaps: <a href="https://www.openstreetmap.org/relation/287083" target="_blank">
-                                Discover {{ countryDetails.name.common }}</a>
+
+                        <li ref="googleMapsRef">
+                            OpenStreetMaps: <a :href="countryDetails.maps.openStreetMaps" target="_blank"> Discover {{
+                                countryDetails.name.common }}</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
