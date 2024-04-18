@@ -1,0 +1,1 @@
+import{_ as s,v as c,t as a,C as p,D as _,x as o}from"./rA0nG8O0.js";const n={},t=e=>(p("data-v-c2774fa5"),e=e(),_(),e),d=t(()=>o("h1",null,"Welcome to My Nuxt.js App!",-1)),r=t(()=>o("p",null,"This is the home page.",-1)),i=[d,r];function l(e,h,u,f,m,x){return a(),c("div",null,i)}const I=s(n,[["render",l],["__scopeId","data-v-c2774fa5"]]);export{I as default};
