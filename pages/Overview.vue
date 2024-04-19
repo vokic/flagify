@@ -1,5 +1,5 @@
 <template>
-    <div class="square ">
+    <div class="square mr-3">
         <div>
         </div>
         <div v-if="countryDetails">
@@ -13,7 +13,7 @@
                 <div class="text-4xl font-bold ml-4">{{ countryDetails.name.common }}</div>
                 <div class="ml-4 border-bottom-1 border-200">{{ countryDetails.name.official }}</div>
             </div>
-            <div class=""><img class="w-20rem border-1 border-200" :src="countryDetails.flags.svg"
+            <div class="mt-3"><img class="w-20rem border-1 border-200" :src="countryDetails.flags.svg"
                     :alt="countryDetails.name.common" />
             </div>
 
