@@ -4,7 +4,7 @@
             <!-- Flags component -->
             <Flags @showCountryDetails="setSelectedCountryName" />
         </SplitterPanel>
-        <SplitterPanel class="overflow-y-auto" :size="65">
+        <SplitterPanel class="overflow-y-auto" :size="65" :minSize="35">
             <!-- Overview component -->
             <Overview :countryName="selectedCountryName" />
         </SplitterPanel>
