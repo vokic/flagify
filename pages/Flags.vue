@@ -10,8 +10,9 @@
     <!-- Filtered flags -->
     <DataView :value="filteredFlags" paginator :rows="5">
       <template #list="flags">
-        <div v-for="(item, index) in flags.items" :key="index" class="col-12 m-0 p-0">
-          <div class="grid border-top-1	border-300 grid-item">
+        <div v-for="(item, index) in flags.items" :key="index" class="col-12 m-0 p-0"
+          :class="{ 'selected': index === selectedCardIndex }" @click="selectCard(index)">
+          <div class="grid border-top-1	border-100 grid-item">
             <!-- Flag details -->
             <div class="col-7">
               <div class="col-12">
@@ -68,6 +69,8 @@ const showCountryDetails = (countryName: string) => {
 // Reactive variables
 const flags = ref<Flags[]>([]);
 const searchQuery = ref<string>('');
+const selectedCardIndex = ref<number>(-1); // Track selected card index
+
 
 // Fetch flags data on component mount
 onMounted(async () => {
@@ -89,6 +92,12 @@ const filteredFlags = computed(() => {
     );
 });
 
+// Method to select card
+const selectCard = (index: number) => {
+  selectedCardIndex.value = index;
+};
+
+
 </script>
 
 <style scoped>
@@ -104,5 +113,10 @@ const filteredFlags = computed(() => {
 /* Color the SVG */
 .filter-grey {
   filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(250%) hue-rotate(152deg) brightness(82%) contrast(87%);
+}
+
+.selected {
+  background-color: rgb(241, 245, 249);
+  /* Change to your desired background color */
 }
 </style>
