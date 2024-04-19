@@ -27,7 +27,7 @@
                     }}</b>, is a
                 country situated in <b>{{ countryDetails.subregion }}</b>. Its common name, <b>{{
                     countryDetails.name.common
-                }}</b>,
+                    }}</b>,
                 reflects its rich cultural and geographical heritage. Bordered by <b>
                     {{ countryDetails.borders ? countryDetails.borders.join(', ') : 'no countries because it is an'
                         +
@@ -48,8 +48,8 @@
                 Its
                 capital city, <b>{{ countryDetails.capital[0] }}</b>, serves as the political and economic hub,
                 situated at a
-                latitude and longitude of <b>{{ countryDetails.capitalInfo.latlng[0] }}</b> and
-                <b>{{ countryDetails.capitalInfo.latlng[1] }}</b>, respectively.
+                latitude of <b>{{ countryDetails.capitalInfo.latlng[0] }}</b> and longitude of
+                <b>{{ countryDetails.capitalInfo.latlng[1] }}</b>.
                 <br>
                 <h3>Language and Culture</h3>
                 <b>{{ countryDetails.languages.eng }}</b> is the official language of <b>{{
@@ -104,7 +104,7 @@
                 International Recognition and Sports
                 <b>{{ countryDetails.name.common }}</b> participates in international events such as <b>{{
                     countryDetails.fifa
-                }}</b>,
+                    }}</b>,
                 representing the nation's passion for sports and competition. Its rich sporting heritage
                 contributes
                 to its global recognition and fosters connections with other nations.
@@ -114,7 +114,7 @@
                 culture make
                 it a destination worth exploring. Whether trekking through its pristine <b>{{
                     countryDetails.region
-                }}</b>
+                    }}</b>
                 or
                 immersing in its rich history, visitors to <b>{{ countryDetails.name.common }}</b> are sure to
                 be
