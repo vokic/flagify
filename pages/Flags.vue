@@ -10,7 +10,7 @@
     <!-- Filtered flags -->
     <DataView :value="filteredFlags" paginator :rows="5">
       <template #list="flags">
-        <div v-for="(item, index) in flags.items" :key="index" class="col-12 m-0 p-2">
+        <div v-for="(item, index) in flags.items" :key="index" class="col-12 m-0 p-0">
           <div class="grid border-top-1	border-300 grid-item">
             <!-- Flag details -->
             <div class="col-7">
