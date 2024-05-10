@@ -28,8 +28,8 @@ This Vue Nuxt application leverages Vue.js and Nuxt.js to create a client-side r
 
 **Preview:**
   
-  ![Results](https://i.imgur.com/uTQepVe.png)
+  ![Results](https://i.imgur.com/hufE3mx.png)
 
-  ![Details](https://i.imgur.com/j2XFheo.png)
+  ![Details](https://i.imgur.com/BoWBMsn.png)
 
-  ![Details with map](https://i.imgur.com/G6TgJQE.png)
+  ![Details with map](https://i.imgur.com/4Su1LJI.png)
